@@ -3,7 +3,7 @@ html {
 }
 
 .container {
-    display: inline-flex;
+    display: flex;
 }
 
 .content {
@@ -33,9 +33,11 @@ h3 {
 }
 
 h4 {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     line-height: 1.2;
     font-family: "Merriweather", serif;
+    font-family: "Ubuntu", sans-serif;
+
     font-weight: 600;
 }
 
@@ -43,7 +45,14 @@ h5 {
     font-size: 1.1rem;
     line-height: 1.2;
     font-family: "Lora", serif;
-    font-weight: 600;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.2;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
 }
 
 /* Header */
@@ -86,10 +95,40 @@ header nav a {
     font-weight: 400;
 }
 
+header a:hover {
+    transition: .3s;
+    color: #F29544;
+}
+
+@media only screen and (max-width: 550px) {
+    header .container {
+        height: 2rem;
+        padding: 0 1.5%;
+    }
+
+    header .logo a {
+        font-size: 1.1rem;
+    }
+
+    header nav ul li {
+        padding-left: 1rem;
+    }
+
+    header nav a {
+        font-size: 1rem;
+    }
+}
+
 /* Main */
 
 main {
     padding-top: 3rem;
+}
+
+@media only screen and (max-width: 550px) {
+    main {
+        padding-top: 2rem;
+    }
 }
 
 /* Quote */
@@ -109,7 +148,6 @@ main {
     min-width: 10rem;
     max-width: 15rem;
     height: auto;
-    flex: 1;
 }
 
 .quote .container .img-container img {
@@ -124,37 +162,66 @@ main {
     text-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
+@media only screen and (max-width: 1000px) {
+    .quote span {
+        padding-left: 2rem;
+    }
+
+    .quote h1 {
+        font-size: 2.5rem;
+    }
+
+    .quote .container .img-container {
+        min-width: 5rem;
+        max-width: 8rem;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .quote span {
+        padding-left: 0;
+    }
+
+    .quote h1 {
+        font-size: 1.8rem;
+    }
+
+    .quote h3 {
+        font-size: 1.3rem;
+    }
+
+    .quote .img-container {
+        display: none;
+    }
+}
+
 /* Goals */
 
 .goals {
-    padding: 2% 5%;
-    /* min-height: 16rem; */
+    padding: 2% 4%;
+    background-image: linear-gradient(#132938, #011126);
 }
 
-.goals .container .chrono {
-    gap: 2%;
-    padding: 2%;
-    display: block;
-    /* flex-wrap: wrap;
-    justify-content: center; */
-    /* row-gap: 2%; */
-    /* height: 125rem; */
+.chrono {
+    flex-wrap: wrap;
 }
 
 .goals .content {
-    min-height: 16rem;
-    background-color: #011126;
-    background-image: linear-gradient(#132938, #011126);
+    min-height: 10rem;
+    background-image: linear-gradient(white, #EDF7FC);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     padding: .8%;
     min-width: 20rem;
-    /* flex-basis: 20rem; */
     flex: 1;
-    color: #EDF7FC;
+    color: #011126;
+    margin: .7%;
+    border-radius: .5rem;
 }
 
 .goals .container .numbering {
-    align-items: flex-end;
+    align-items: center;
+    min-height: 4rem;
 }
 
 .goals span {
@@ -176,5 +243,105 @@ main {
     line-height: 1.2;
     font-weight: 300;
     position: relative;
-    padding-top: 1.5rem;
+    padding: 1.5rem 0;
+}
+
+@media only screen and (max-width:550px) {
+    .goals .content {
+        min-height: 0;
+    }
+
+    .goals span {
+        font-size: 2.5rem;
+    }
+    
+    .goals h4 {
+        padding-left: 1.5rem;
+        text-align: left;
+    }
+    
+    .goals h5 {
+        padding: .5rem 0;
+    }
+}
+
+/* Atreides */
+
+.atreides .container {
+    padding: 2% 8%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 3rem;
+    color: #011126;
+}
+
+.atreides .content {
+    align-items: center;
+    /* min-width: 20%; */
+    min-width: 25rem;
+    max-width: 35rem;
+}
+
+.image-container {
+    width: 80%;
+    margin-bottom: 1.5rem;
+}
+
+.image-container img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.atreides h4 {
+    text-align: center;
+}
+.atreides span {
+    font-weight: 400;
+}
+
+.atreides h5 {
+    margin-top: .5rem;
+    width: 70%;
+    text-align: center;
+}
+
+@media only screen and (max-width:550px) {
+    .image-container {
+        margin-bottom: .5rem;
+    }
+
+    .atreides .container {
+        row-gap: 1.5rem;
+    }
+
+    .atreides h5 {
+        margin-top: 0;
+    }
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+footer .content {
+    gap: 1rem;
+    padding: 1.2rem 2rem;
+    text-align: center;
+    background-image: linear-gradient(#132938, #011126);
+    color: #EDF7FC;
+}
+
+footer span {
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+footer .rights {
+    font-style: italic;
+    font-size: .875rem;
 }
