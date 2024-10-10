@@ -72,7 +72,7 @@ header .container {
 }
 
 header .logo a {
-    color: #edf7fc;
+    color: #F29544;
     font-size: 1.6rem;
     line-height: 1.2;
     font-family: "Lora", serif;
@@ -100,22 +100,20 @@ header a:hover {
     color: #F29544;
 }
 
-@media only screen and (max-width: 550px) {
-    header .container {
-        height: 2rem;
-        padding: 0 1.5%;
-    }
+header a:active {
+    /* transition: .3s; */
+    color: #edf7fc;
+}
 
-    header .logo a {
-        font-size: 1.1rem;
+@media only screen and (max-width:550px) {
+    header .container {
+        height: 3.5rem;
+        flex-direction: column;
     }
 
     header nav ul li {
-        padding-left: 1rem;
-    }
-
-    header nav a {
-        font-size: 1rem;
+        padding-left: 0;
+        margin: 0 .5rem;
     }
 }
 
@@ -127,7 +125,7 @@ main {
 
 @media only screen and (max-width: 550px) {
     main {
-        padding-top: 2rem;
+        padding-top: 4.5rem;
     }
 }
 
@@ -205,6 +203,7 @@ main {
 
 .chrono {
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .goals .content {
@@ -212,7 +211,8 @@ main {
     background-image: linear-gradient(white, #EDF7FC);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     padding: .8%;
-    min-width: 20rem;
+    min-width: 15rem;
+    max-width: 20rem;
     flex: 1;
     color: #011126;
     margin: .7%;
@@ -230,6 +230,7 @@ main {
     font-weight: 800;
     padding-left: 1rem;
     font-family: "Ubuntu", sans-serif;
+    color: #F29544;
 }
 
 .goals h4 {
@@ -246,7 +247,12 @@ main {
     padding: 1.5rem 0;
 }
 
-@media only screen and (max-width:550px) {
+@media only screen and (max-width:560px) {
+    .goals .content {
+        min-width: 100%;
+        margin: .3rem;
+    }
+
     .goals .content {
         min-height: 0;
     }
@@ -277,7 +283,6 @@ main {
 
 .atreides .content {
     align-items: center;
-    /* min-width: 20%; */
     min-width: 25rem;
     max-width: 35rem;
 }
@@ -300,6 +305,7 @@ main {
 }
 .atreides span {
     font-weight: 400;
+    color: #F29544;
 }
 
 .atreides h5 {
@@ -319,6 +325,10 @@ main {
 
     .atreides h5 {
         margin-top: 0;
+    }
+    
+    .atreides .content {
+        min-width: 0;
     }
 }
 
